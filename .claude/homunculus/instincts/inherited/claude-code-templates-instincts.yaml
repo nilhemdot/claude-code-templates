@@ -1,0 +1,324 @@
+# Instincts generated from https://github.com/nilhemdot/claude-code-templates
+# Generated: 2026-05-17T21:50:35.927Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: claude-code-templates-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/nilhemdot/claude-code-templates
+---
+
+# Claude Code Templates Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: chore
+
+## Evidence
+
+- 1 commits analyzed
+- Detected conventional commit pattern
+- Examples: chore(deps): bump the npm_and_yarn group across 5 directories with 26 updates
+
+---
+id: claude-code-templates-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/nilhemdot/claude-code-templates
+---
+
+# Claude Code Templates Commit Length
+
+## Action
+
+Write moderate-length commit messages (~77 characters)
+
+## Evidence
+
+- Average commit message length: 77 chars
+- Based on 1 commits
+
+---
+id: claude-code-templates-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/nilhemdot/claude-code-templates
+---
+
+# Claude Code Templates Naming Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: kebab-case
+
+---
+id: claude-code-templates-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/nilhemdot/claude-code-templates
+---
+
+# Claude Code Templates Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: claude-code-templates-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/nilhemdot/claude-code-templates
+---
+
+# Claude Code Templates Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: claude-code-templates-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/nilhemdot/claude-code-templates
+---
+
+# Claude Code Templates Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: claude-code-templates-workflow-multi-package-dependency-upgrade
+trigger: "when doing multi package dependency upgrade"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/nilhemdot/claude-code-templates
+---
+
+# Claude Code Templates Workflow Multi Package Dependency Upgrade
+
+## Action
+
+Follow the multi-package-dependency-upgrade workflow:
+1. Identify outdated dependencies in each package (package.json).
+2. Update package.json and package-lock.json files in each affected directory.
+3. Commit all updated files together, often with a detailed changelog in the commit message.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: */package.json, */package-lock.json, package.json
+
+---
+id: claude-code-templates-instinct-file-naming
+trigger: "When creating a new file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: nilhemdot/claude-code-templates
+---
+
+# Claude Code Templates Instinct File Naming
+
+## Action
+
+Name the file using kebab-case
+
+## Evidence
+
+- Pattern in namingConventions.files = kebab-case
+
+---
+id: claude-code-templates-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: nilhemdot/claude-code-templates
+---
+
+# Claude Code Templates Instinct Function Naming
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Pattern in namingConventions.functions = camelCase
+
+---
+id: claude-code-templates-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: nilhemdot/claude-code-templates
+---
+
+# Claude Code Templates Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in namingConventions.classes = PascalCase
+
+---
+id: claude-code-templates-instinct-constant-naming
+trigger: "When declaring a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: nilhemdot/claude-code-templates
+---
+
+# Claude Code Templates Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Pattern in namingConventions.constants = SCREAMING_SNAKE_CASE
+
+---
+id: claude-code-templates-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: nilhemdot/claude-code-templates
+---
+
+# Claude Code Templates Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle = relative
+
+---
+id: claude-code-templates-instinct-export-style
+trigger: "When exporting from a module"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: nilhemdot/claude-code-templates
+---
+
+# Claude Code Templates Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle = named
+
+---
+id: claude-code-templates-instinct-test-location
+trigger: "When adding new tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: nilhemdot/claude-code-templates
+---
+
+# Claude Code Templates Instinct Test Location
+
+## Action
+
+Place test files in a separate directory from source files
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation = separate
+
+---
+id: claude-code-templates-instinct-git-commit-format
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: nilhemdot/claude-code-templates
+---
+
+# Claude Code Templates Instinct Git Commit Format
+
+## Action
+
+Format the commit message using the conventional commit style, starting with a type prefix such as 'chore'
+
+## Evidence
+
+- Pattern in commits.type = conventional
+- Prefix 'chore' seen in commit examples
+
+---
+id: claude-code-templates-instinct-multi-package-dependency-upgrade
+trigger: "When dependencies need to be updated across multiple packages/directories"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: nilhemdot/claude-code-templates
+---
+
+# Claude Code Templates Instinct Multi Package Dependency Upgrade
+
+## Action
+
+Identify outdated dependencies in each package, update all relevant package.json and package-lock.json files, and commit all changes together with a detailed changelog
+
+## Evidence
+
+- multi-package-dependency-upgrade workflow definition
+- Example commit sequence
+
